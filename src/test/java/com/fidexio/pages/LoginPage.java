@@ -1,6 +1,6 @@
-package com.fidexio_project.pages;
+package com.fidexio.pages;
 
-import com.fidexio_project.utilities.Driver;
+import com.fidexio.utils.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;

@@ -1,4 +1,4 @@
-package com.fidexio_project.utilities;
+package com.fidexio.utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

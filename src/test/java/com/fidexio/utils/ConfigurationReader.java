@@ -1,4 +1,4 @@
-package com.fidexio_project.utilities;
+package com.fidexio.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
