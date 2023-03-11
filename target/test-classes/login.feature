@@ -9,7 +9,6 @@ Feature: Login Functionality
     And User enters valid password"<password>"
     And User clicks login button
     Then User should be on the  homepage
-
     Examples: Email and Password
       | email                    | password     |
       | salesmanager6@info.com   | salesmanager |
@@ -42,7 +41,7 @@ Feature: Login Functionality
     Then user land on the reset password page
 
   @FIDEX10-358
-  Scenario : User should see the password in bullet signs by default
+  Scenario: User should see the password in bullet signs by default
     When user enters valid password "salesmanager"
     Then user see the password in bullet signs
 

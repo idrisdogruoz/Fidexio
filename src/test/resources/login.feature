@@ -41,7 +41,7 @@ Feature: Login Functionality
     Then user land on the reset password page
 
   @FIDEX10-358
-  Scenario : User should see the password in bullet signs by default
+  Scenario: User should see the password in bullet signs by default
     When user enters valid password "salesmanager"
     Then user see the password in bullet signs
 
