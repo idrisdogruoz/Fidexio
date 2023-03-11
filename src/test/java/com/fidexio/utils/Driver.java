@@ -14,6 +14,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
@@ -52,37 +54,16 @@ public class Driver {
                         desiredCapabilities.setBrowserName("chrome");
                         driver = new RemoteWebDriver(url, desiredCapabilities);
 
-
-                    } catch (Exception e) {
-
-                        e.printStackTrace();
-
-                    }
-
-                    break;
-
-                case "remote-firefox":
-
-                    try {
-
-                        String gridAddress = "";
-                        URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
-                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-                        desiredCapabilities.setBrowserName("firefox");
-                        driver = new RemoteWebDriver(url, desiredCapabilities);
-                        driver.manage().window().maximize();
-                        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
                     break;
 
                 case "chrome":
-
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments(ConfigurationReader.getProperty("language"));
+                    driver = new ChromeDriver(options);
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
@@ -101,6 +82,24 @@ public class Driver {
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    break;
+
+                case "remote-firefox":
+
+                    try {
+
+                        String gridAddress = "";
+                        URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
+                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                        desiredCapabilities.setBrowserName("firefox");
+                        driver = new RemoteWebDriver(url, desiredCapabilities);
+                        driver.manage().window().maximize();
+                        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
                     break;
 
                 case "firefox-headless":

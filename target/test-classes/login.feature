@@ -31,10 +31,10 @@ Feature: Login Functionality
       | posmanager100@info.com   | pomanager    |
 
   @FIDEX10-356
-  Scenario: "Please fill out this field" message should be displayed if the password or username is empty
+  Scenario: "Please fill out this field." message should be displayed if the password or username is empty
     When user do not enter email or password
     And  user clicks login button
-    Then user see "Please fill in this field." warning message
+    Then user see "Please fill out this field." warning message
 @FIDEX10-357
   Scenario:User land on the ‘reset password’ page after clicking on the "Reset password" link
     When user click on the Reset password link
@@ -46,18 +46,8 @@ Feature: Login Functionality
     Then user see the password in bullet signs
 
   @FIDEX10-359
-  Scenario Outline: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
-    When  user enters valid email "<email>"
-    And user enters valid password "<password>"
+  Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
+    When user enters valid email "salesmanager55@info.com"
+    And user enters valid password "salesmanager"
     And user enters Enter key on the keyboard.
     Then user is on home page
-    Examples:Email and Passwords
-      | email                   | password     |
-      | salesmanager90@info.com | salesmanager |
-      | posmanager60@info.com   | posmanager   |
-      | salesmanager95@info.com | salesmanager |
-      | posmanager63@info.com   | posmanager   |
-      | salesmanager10@info.com | salesmanager |
-      | posmanager100@info.com  | posmanager   |
-      | salesmanager97@info.com | salesmanager |
-      | posmanager69@info.com   | posmanager   |

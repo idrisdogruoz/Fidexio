@@ -83,17 +83,19 @@ public class LoginStepDefs {
         loginPage.loginBtn.click();
     }
 
-    @Then("user see {string} warning message")
-    public void userSeeWarningMessage(String expectedMessage) {
-        String actualMessageEmail = loginPage.email.getAttribute("validationMessage");
-        String actualMessagePassword = loginPage.password.getAttribute("validationMessage");
-        if (actualMessageEmail.isEmpty()) {
-            System.out.println(actualMessageEmail);
-        }
-        Assert.assertTrue(expectedMessage.equals(actualMessageEmail));
 
+@Then("user see {string} warning message")
+public void userSeeWarningMessage(String expectedMessage) {
+    String actualMessageEmail = loginPage.email.getAttribute("validationMessage");
+    String actualMessage=actualMessageEmail;
+    String actualMessagePassword = loginPage.password.getAttribute("validationMessage");
+    System.out.println("actualMessagePassword = " + actualMessagePassword);
+    if (actualMessageEmail.isEmpty()) {
+        actualMessage=actualMessagePassword;
     }
-
+    System.out.println(actualMessage);
+    Assert.assertTrue(expectedMessage.equals(actualMessage));
+}
     @When("user enters valid password {string}")
     public void userEntersValidPassword(String password) {
         loginPage.password.sendKeys(password);
@@ -102,24 +104,11 @@ public class LoginStepDefs {
 
     @When("user enters valid password salesmanager")
     public void userEntersValidPasswordSalesmanager() {
-        String actualPasswordType="password";
-        String expectedPasswordType=loginPage.password.getAttribute("type");
+        String actualPasswordType = "password";
+        String expectedPasswordType = loginPage.password.getAttribute("type");
         Assert.assertTrue(expectedPasswordType.equals(actualPasswordType));
     }
 
-    @When("user enters valid email {string}")
-    public void userEntersValidEmail(String email) {
-        loginPage.email.sendKeys(email);
-    }
-
-    @And("user enters Enter key on the keyboard.")
-    public void userEntersEnterKeyOnTheKeyboard(String email) {
-        loginPage.loginBtn.sendKeys(Keys.ENTER);
-    }
-
-    @Then("user is on home page")
-    public void userIsOnHomePage() {
-    }
 
     @When("user click on the Reset password link")
     public void userClickOnTheResetPasswordLink() {
@@ -132,6 +121,21 @@ public class LoginStepDefs {
     @Then("user see the password in bullet signs")
     public void userSeeThePasswordInBulletSigns() {
 
+    }
+
+
+    @When("user enters valid email {string}")
+    public void userEntersValidEmail(String email) {
+        loginPage.email.sendKeys(email);
+    }
+
+    @And("user enters Enter key on the keyboard.")
+    public void userEntersEnterKeyOnTheKeyboard() {
+        loginPage.loginBtn.sendKeys(Keys.ENTER);
+    }
+
+    @Then("user is on home page")
+    public void userIsOnHomePage() {
     }
 
 
