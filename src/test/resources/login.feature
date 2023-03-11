@@ -9,7 +9,6 @@ Feature: Login Functionality
     And User enters valid password"<password>"
     And User clicks login button
     Then User should be on the  homepage
-
     Examples: Email and Password
       | email                    | password     |
       | salesmanager6@info.com   | salesmanager |
