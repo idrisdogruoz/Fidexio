@@ -18,6 +18,7 @@ LogoutPage logoutPage = new LogoutPage();
 
     @And("user logged in with  valid credential")
     public void userLoggedInWithValidCredential() {
+
     }
 
     @When("user clicks username at the right top  of  the  corner")
