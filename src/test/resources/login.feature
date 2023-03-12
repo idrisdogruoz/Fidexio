@@ -1,5 +1,6 @@
 Feature: Login Functionality
 
+
   Background: Login page
     Given User is on the login page
 
