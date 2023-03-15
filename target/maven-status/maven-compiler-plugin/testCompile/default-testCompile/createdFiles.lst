@@ -1,8 +1,0 @@
-com\fidexio\utils\Driver.class
-com\fidexio\utils\BrowserUtils.class
-com\fidexio\utils\ConfigurationReader.class
-com\fidexio\pages\LoginPage.class
-com\fidexio\step_definitions\Hooks.class
-com\fidexio\step_definitions\LoginStepDefs.class
-com\fidexio\runners\CukesRunner.class
-com\fidexio\runners\FailedTestRunner.class
