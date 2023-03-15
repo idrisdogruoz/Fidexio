@@ -40,7 +40,7 @@ public class Log_out_step_definitions {
         logoutPage.logoutbtn.click();
     }
 
-    @Then("user  goes back to login page")
+    @Then("user goes back to login page")
     public void user_goes_back_to_login_page() {
         String actualTitle = Driver.getDriver().getTitle();
         String expectedTitle = "Login | Best solution for startups";

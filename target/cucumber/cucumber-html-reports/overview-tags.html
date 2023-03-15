@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@logout", ] ,
+        labels:  [ "@FIDEX10-422",  "@FIDEX10-423",  "@FIDEX10-424", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00, ] 
+                data:  [ 100.00,  100.00,  100.00, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             }
         ]
     };
@@ -133,7 +133,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>15 Mar 2023, 15:18</td>
+      <td>15 Mar 2023, 16:35</td>
     </tr>
   </tbody>
 </table>
@@ -195,7 +195,41 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-tag_2015815113.html">@logout</a></td>
+        <td class="tagname"><a href="report-tag_3007154649.html">@FIDEX10-422</a></td>
+
+        <td      class="passed"    >3</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">3</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2212705200">2.212</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_3007154650.html">@FIDEX10-423</a></td>
+
+        <td      class="passed"    >5</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">5</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2240612800">2.240</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_3007154651.html">@FIDEX10-424</a></td>
 
         <td      class="passed"    >8</td>
         <td >0</td>
@@ -208,7 +242,7 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="4652747500">4.652</td>
+        <td class="duration" data-value="4453318000">4.453</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -216,19 +250,19 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>8</td>
+      <td>16</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>8</td>
+      <td>16</td>
 
-      <td>2</td>
+      <td>4</td>
       <td>0</td>
-      <td>2</td>
+      <td>4</td>
 
-      <td class="duration">4.652</td>
-      <td>1</td>
+      <td class="duration">8.906</td>
+      <td>3</td>
     </tr>
     <tr>
       <td></td>
